@@ -14,5 +14,6 @@
 	"projectDemo" : {
 		"Joomla! - Phoca Restaurant Menu Demo": "https://www.phoca.cz/restaurantmenudemo"
 	},
-	"projectColor": "#129ed9"
+	"projectColor": "#129ed9",
+	"projectBranch": "main"
 }
