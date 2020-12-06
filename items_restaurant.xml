@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="pcl" method="upgrade" version="3.9">
+	<name>plg_pcl_items_restaurant</name>
+	<author>Jan Pavelka (www.phoca.cz)</author>
+	<creationDate>06/12/2020</creationDate>
+	<authorEmail></authorEmail>
+	<authorUrl>https://www.phoca.cz</authorUrl>
+	<copyright>Jan Pavelka</copyright>
+	<license>GNU/GPL</license>
+	<version>3.5.5</version>
+	<description>PLG_PCL_ITEMS_RESTAURANT_DESCRIPTION</description>
+	<projectName>PhocaCartLayoutItemsRestaurantPlugin</projectName>
+
+	<media destination="plg_pcl_items_restaurant" folder="media">
+		<folder>css</folder>
+		<filename>index.html</filename>
+	</media>
+
+	<files>
+		<folder>helpers</folder>
+		<folder>tmpl</folder>
+		<filename plugin="items_restaurant">index.html</filename>
+		<filename plugin="items_restaurant">items_restaurant.php</filename>
+	</files>
+
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_pcl_items_restaurant.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_pcl_items_restaurant.sys.ini</language>
+	</languages>
+
+	<administration>
+		<languages>
+			<language tag="en-GB">language/en-GB/en-GB.plg_pcl_items_restaurant.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.plg_pcl_items_restaurant.sys.ini</language>
+		</languages>
+	</administration>
+	
+	<config>
+	<fields name="params" addfieldpath="/administrator/components/com_phocacart/models/fields">
+	
+	<fieldset name="basic" addpath="/administrator/components/com_phocacart/models/fields" group="pcl">
+
+	</fieldset>
+	</fields>
+
+</config>
+
+	<updateservers>
+		<server type="extension" name="PLG_PCL_ITEMS_RESTAURANT" priority="1"><![CDATA[https://raw.githubusercontent.com/PhocaCz/PhocaCartLayoutItemsRestaurantPlugin/master/manifest.xml]]></server>
+	</updateservers>
+</extension>

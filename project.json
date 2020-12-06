@@ -1,0 +1,18 @@
+{
+	"author": "Jan Pavelka (www.phoca.cz)",
+	"authorUrl": "https://www.phoca.cz",
+	"copyright": "Jan Pavelka",
+	"license": "GNU/GPL",
+	"projectName": "PhocaCartLayoutItemsRestaurantPlugin",
+	"extensionName": "Phoca Cart Layout Items Restaurant Plugin",
+	"projectInitials" : "PC",				  
+	"description": "Phoca Cart Layout - Items Restaurant Plugin - plugin layout method for Phoca Cart component",
+	"projectUrl": "https://www.phoca.cz/phocacart-extensions/2-plugins/52-phoca-cart-layout-items-restaurant-plugin",
+	"projectDocumentationUrl": "https://www.phoca.cz/documentation/category/115-phoca-cart",
+	"projectMainComponent": "Phoca Cart",
+	"projectMainComponentInfoUrl": "https://www.phoca.cz/project/phocacart-joomla-ecommerce",
+	"projectDemo" : {
+		"Joomla! - Phoca Restaurant Menu Demo": "https://www.phoca.cz/restaurantmenudemo"
+	},
+	"projectColor": "#129ed9"
+}
