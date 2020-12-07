@@ -11,6 +11,7 @@ defined('_JEXEC') or die();
 use Joomla\CMS\HTML\HTMLHelper;
 
 $layoutI	= new JLayoutFile('product_image', null, array('component' => 'com_phocacart'));
+$layoutAI	= new JLayoutFile('button_add_to_cart_icon', null, array('component' => 'com_phocacart'));
 $layoutP	= new JLayoutFile('product_price', null, array('component' => 'com_phocacart'));
 $layoutAB	= new JLayoutFile('attribute_options_box', null, array('component' => 'com_phocacart'));
 $layoutV	= new JLayoutFile('button_product_view', null, array('component' => 'com_phocacart'));

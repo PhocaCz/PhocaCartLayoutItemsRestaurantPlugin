@@ -2,7 +2,7 @@
 <extension type="plugin" group="pcl" method="upgrade" version="3.9">
 	<name>plg_pcl_items_restaurant</name>
 	<author>Jan Pavelka (www.phoca.cz)</author>
-	<creationDate>06/12/2020</creationDate>
+	<creationDate>07/12/2020</creationDate>
 	<authorEmail></authorEmail>
 	<authorUrl>https://www.phoca.cz</authorUrl>
 	<copyright>Jan Pavelka</copyright>
@@ -21,7 +21,6 @@
 		<folder>tmpl</folder>
 		<filename plugin="items_restaurant">index.html</filename>
 		<filename plugin="items_restaurant">items_restaurant.php</filename>
-		<filename plugin="items_restaurant">manifest.xml</filename>
 	</files>
 
 	<languages>
