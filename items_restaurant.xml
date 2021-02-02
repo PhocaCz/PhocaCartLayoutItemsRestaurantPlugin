@@ -2,7 +2,7 @@
 <extension type="plugin" group="pcl" method="upgrade" version="3.9">
 	<name>plg_pcl_items_restaurant</name>
 	<author>Jan Pavelka (www.phoca.cz)</author>
-	<creationDate>07/12/2020</creationDate>
+	<creationDate>01/02/2021</creationDate>
 	<authorEmail></authorEmail>
 	<authorUrl>https://www.phoca.cz</authorUrl>
 	<copyright>Jan Pavelka</copyright>

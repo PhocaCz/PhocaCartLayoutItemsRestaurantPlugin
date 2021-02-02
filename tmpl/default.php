@@ -224,6 +224,7 @@ if (!empty($items)) {
 			$dAb['attr_options']			= $attributesOptions;
 			$dAb['hide_attributes']			= $t['hide_attributes_category'];
 			$dAb['dynamic_change_image'] 	= $t['dynamic_change_image'];
+			$dAb['remove_select_option_attribute']	= $t['remove_select_option_attribute'];
 			$dAb['zero_attribute_price']	= $t['zero_attribute_price'];
 			$dAb['pathitem']				= $t['pathitem'];
 			$dAb['product_id']				= (int)$v->id;
@@ -422,8 +423,6 @@ $s      = $d['s'];
 $col    = $d['col'];
 
 $price = new PhocacartPrice();
-krumo($price);
-krumo($items);
 /*
 
 echo '<div class="'.$s['c']['row-item'].' '.$s['c']["col.xs12.sm{$col}.md{$col}"].'">';
