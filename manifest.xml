@@ -5,10 +5,10 @@
 		<element>items_restaurant</element>
 		<folder>pcl</folder>
 		<type>plugin</type>
-		<version>3.5.5</version>
-		<infourl title="Phoca Cart Layout Items Restaurant Plugin 3.5.5">https://www.phoca.cz/</infourl>
+		<version>3.5.7</version>
+		<infourl title="Phoca Cart Layout Items Restaurant Plugin 3.5.7">https://www.phoca.cz/</infourl>
 		<downloads>
-			<downloadurl type="full" format="zip">https://github.com/PhocaCz/PhocaCartLayoutItemsRestaurantPlugin/releases/download/3.5.5/plg_pcl_items_restaurant_v3.5.5.zip</downloadurl>
+			<downloadurl type="full" format="zip">https://github.com/PhocaCz/PhocaCartLayoutItemsRestaurantPlugin/releases/download/3.5.7/plg_pcl_items_restaurant_v3.5.7.zip</downloadurl>
 		</downloads>
 		<tags>
 			<tag>stable</tag>
