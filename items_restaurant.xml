@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="plugin" group="pcl" method="upgrade" version="3.9">
+<extension type="plugin" group="pcl" method="upgrade" version="4.0">
 	<name>plg_pcl_items_restaurant</name>
 	<author>Jan Pavelka (www.phoca.cz)</author>
-	<creationDate>22/09/2021</creationDate>
+	<creationDate>23/02/2022</creationDate>
 	<authorEmail></authorEmail>
 	<authorUrl>https://www.phoca.cz</authorUrl>
 	<copyright>Jan Pavelka</copyright>
 	<license>GNU/GPL</license>
-	<version>3.5.7</version>
+	<version>4.0.0</version>
 	<description>PLG_PCL_ITEMS_RESTAURANT_DESCRIPTION</description>
 	<projectName>PhocaCartLayoutItemsRestaurantPlugin</projectName>
 
@@ -17,10 +17,10 @@
 	</media>
 
 	<files>
-		<folder>helpers</folder>
 		<folder>tmpl</folder>
-		<filename plugin="items_restaurant">index.html</filename>
+		<folder>helpers</folder>
 		<filename plugin="items_restaurant">items_restaurant.php</filename>
+		<filename plugin="items_restaurant">index.html</filename>
 	</files>
 
 	<languages>

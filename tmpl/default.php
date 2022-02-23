@@ -9,20 +9,22 @@
 defined('_JEXEC') or die();
 
 use Joomla\CMS\HTML\HTMLHelper;
+use Joomla\CMS\Layout\FileLayout;
+use Joomla\CMS\Router\Route;
 
-$layoutI	= new JLayoutFile('product_image', null, array('component' => 'com_phocacart'));
-$layoutAI	= new JLayoutFile('button_add_to_cart_icon', null, array('component' => 'com_phocacart'));
-$layoutP	= new JLayoutFile('product_price', null, array('component' => 'com_phocacart'));
-$layoutAB	= new JLayoutFile('attribute_options_box', null, array('component' => 'com_phocacart'));
-$layoutV	= new JLayoutFile('button_product_view', null, array('component' => 'com_phocacart'));
-$layoutPFS	= new JLayoutFile('form_part_start_add_to_cart_list', null, array('component' => 'com_phocacart'));
-$layoutPFE	= new JLayoutFile('form_part_end', null, array('component' => 'com_phocacart'));
-$layoutA	= new JLayoutFile('button_add_to_cart_list', null, array('component' => 'com_phocacart'));
-$layoutA2	= new JLayoutFile('button_buy_now_paddle', null, array('component' => 'com_phocacart'));
-$layoutA3	= new JLayoutFile('button_external_link', null, array('component' => 'com_phocacart'));
-$layoutA4 	= new JLayoutFile('button_quickview', null, array('component' => 'com_phocacart'));
-$layoutBSH	= new JLayoutFile('button_submit_hidden', null, array('component' => 'com_phocacart'));
-$layoutQ	= new JLayoutFile('button_ask_question', null, array('component' => 'com_phocacart'));
+$layoutI	= new FileLayout('product_image', null, array('component' => 'com_phocacart'));
+$layoutAI	= new FileLayout('button_add_to_cart_icon', null, array('component' => 'com_phocacart'));
+$layoutP	= new FileLayout('product_price', null, array('component' => 'com_phocacart'));
+$layoutAB	= new FileLayout('attribute_options_box', null, array('component' => 'com_phocacart'));
+$layoutV	= new FileLayout('button_product_view', null, array('component' => 'com_phocacart'));
+$layoutPFS	= new FileLayout('form_part_start_add_to_cart_list', null, array('component' => 'com_phocacart'));
+$layoutPFE	= new FileLayout('form_part_end', null, array('component' => 'com_phocacart'));
+$layoutA	= new FileLayout('button_add_to_cart_list', null, array('component' => 'com_phocacart'));
+$layoutA2	= new FileLayout('button_buy_now_paddle', null, array('component' => 'com_phocacart'));
+$layoutA3	= new FileLayout('button_external_link', null, array('component' => 'com_phocacart'));
+$layoutA4 	= new FileLayout('button_quickview', null, array('component' => 'com_phocacart'));
+$layoutBSH	= new FileLayout('button_submit_hidden', null, array('component' => 'com_phocacart'));
+$layoutQ	= new FileLayout('button_ask_question', null, array('component' => 'com_phocacart'));
 
 $d 		= $displayData;
 $t		= $d['t'];
@@ -55,7 +57,7 @@ if (!empty($items)) {
 		$t['categoryid'] = (int)$v->catid;
 
 		$label 		= PhocacartRenderFront::getLabel($v->date, $v->sales, $v->featured);
-		$link 		= JRoute::_(PhocacartRoute::getItemRoute($v->id, $v->catid, $v->alias, $v->catalias));
+		$link 		= Route::_(PhocacartRoute::getItemRoute($v->id, $v->catid, $v->alias, $v->catalias));
 
 
 		// Image data
@@ -74,7 +76,7 @@ if (!empty($items)) {
 			$categoryTitle = $v->cattitle;
 
 			$headerStarted = 1;
-			echo '<div class="phItemGroup'.str_replace('-', '', ucwords($v->catalias, '-')).'">';// start the header group
+			echo '<div class="row phItemGroup'.str_replace('-', '', ucwords($v->catalias, '-')).'">';// start the header group
 
 		}
 
@@ -289,7 +291,7 @@ if (!empty($items)) {
 			// QUICK VIEW
 			$dA4				= array();
 			$dA4['s']			= $s;
-			$dA4['linkqvb']		= JRoute::_(PhocacartRoute::getItemRoute($v->id, $v->catid, $v->alias, $v->catalias));
+			$dA4['linkqvb']		= Route::_(PhocacartRoute::getItemRoute($v->id, $v->catid, $v->alias, $v->catalias));
 			$dA4['id']			= (int)$v->id;
 			$dA4['catid']		= $t['categoryid'];
 			$dA4['return']		= $t['actionbase64'];
@@ -401,137 +403,4 @@ if (!empty($items)) {
 	echo '</div>';// end row (row-flex)
 	echo '<div class="ph-cb '.$lt.'"></div>';
 }
-
-
-/*
-$layoutI	= new JLayoutFile('product_image', null, array('component' => 'com_phocacart'));
-$layoutP	= new JLayoutFile('product_price', null, array('component' => 'com_phocacart'));
-$layoutAB	= new JLayoutFile('attribute_options_box', null, array('component' => 'com_phocacart'));
-$layoutV	= new JLayoutFile('button_product_view', null, array('component' => 'com_phocacart'));
-$layoutPFS	= new JLayoutFile('form_part_start_add_to_cart_list', null, array('component' => 'com_phocacart'));
-$layoutPFE	= new JLayoutFile('form_part_end', null, array('component' => 'com_phocacart'));
-$layoutA	= new JLayoutFile('button_add_to_cart_list', null, array('component' => 'com_phocacart'));
-$layoutA2	= new JLayoutFile('button_buy_now_paddle', null, array('component' => 'com_phocacart'));
-$layoutA3	= new JLayoutFile('button_external_link', null, array('component' => 'com_phocacart'));
-$layoutA4 	= new JLayoutFile('button_quickview', null, array('component' => 'com_phocacart'));
-$layoutBSH	= new JLayoutFile('button_submit_hidden', null, array('component' => 'com_phocacart'));
-$layoutQ	= new JLayoutFile('button_ask_question', null, array('component' => 'com_phocacart'));
-
-$d 		= $displayData;
-$t		= $d['t'];
-$s      = $d['s'];
-$col    = $d['col'];
-
-$price = new PhocacartPrice();
-/*
-
-echo '<div class="'.$s['c']['row-item'].' '.$s['c']["col.xs12.sm{$col}.md{$col}"].'">';
-echo '<div class="ph-item-box '.$lt.'">';
-
-if (!empty($d['labels'])) { echo '<div class="ph-label-box">' . $d['labels'] . '</div>';}
-
-echo '<div class="'.PhocacartRenderFront::completeClass(array($s['c']['thumbnail'], 'ph-thumbnail', 'ph-thumbnail-c', 'ph-item', $t['class_fade_in_action_icons'], $lt)).'">';
-echo '<div class="ph-item-content '.$lt.'">';
-
-
-
-echo '<div class="'.$s['c']['cat_item_grid'].' ph-category-action-box-icons '.$lt.'">';
-// :L: IMAGE
-echo '<a href="'.$d['link'].'">';
-if (!empty($dI'])) { echo $layoutI->render($dI']);}
-echo '</a>';
-
-echo '<div class="'.$s['c']['cat_item_btns'].' ph-category-action-icons '.$lt.'">';
-if ($t['fade_in_action_icons'] == 0 && $t['display_action_icons'] == 1) {
-    echo $d['icon']['compare']; // if set in options, it will be displayed on other place, so view is why it is printed view way
-    echo $d['icon']['wishlist'];
-    echo $d['icon']['quickview'];
-    echo $d['icon']['addtocart'];
-}
-echo '</div>';// end category_action_box_icons
-echo '</div>';// end category_action_icons
-
-
-echo '<div class="ph-cb"></div>';
-
-// CAPTION, DESCRIPTION BOX
-echo $d['product_header'];
-
-// REVIEW - STAR RATING
-if (!empty($d['review'])) { echo $d['review'];}
-
-// DESCRIPTION
-if (!empty($d['description'])) { echo $d['description'];}
-
-// TAGS
-if (!empty($d['tags'])) { echo '<div class="ph-tag-box">'  . '<span class="ph-tag-box-header">'.JText::_('COM_PHOCACART_TAGS'). '</span>: ' .  $d['tags'] . '</div>';}
-// MANUFACTURER
-if (!empty($d['manufacturer'])) { echo '<div class="ph-manufacturer-box">'  . '<span class="ph-manufacturer-box-header">'.JText::_('COM_PHOCACART_MANUFACTURER'). '</span>: ' .  $d['manufacturer'] . '</div>';}
-
-
-echo '<div class="ph-item-action-box ph-caption ph-category-action-box-buttons '.$lt.'">';
-
-// :L: PRICE
-if (!empty($dP'])) { echo $layoutP->render($dP']);}
-
-
-// ACTION BUTTONS
-echo '<div class="ph-category-action-buttons '.$lt.'">';
-
-// :L: Stock status
-if (!empty($dSO'])) { echo $dSO'];}
-
-// Start Form
-if (!empty($dF'])) { echo $layoutPFS->render($dF']);}
-
-// :L: ATTRIBUTES AND OPTIONS
-if (!empty($dAb'])) { echo $layoutAB->render($dAb']);}
-
-// :L: LINK TO PRODUCT VIEW
-if (!empty($dV'])) { echo $layoutV->render($dV']);}
-
-// :L: ADD TO CART
-if (!empty($dA'])) { echo $layoutA->render($dA']);} else if ($d['icon']['addtocart'] != '') { echo $layoutBSH->render();}
-
-// :L: ASK A QUESTION
-if (!empty($dQ'])) { echo $layoutQ->render($dQ']);}
-
-
-// End Form
-if (!empty($dF'])) { echo $layoutPFE->render();}
-
-if (!empty($dA2'])) { echo $layoutA2->render($dA2']);}
-if (!empty($dA3'])) { echo $layoutA3->render($dA3']);}
-if (!empty($dA4'])) { echo $layoutA4->render($dA4']);}
-
-
-echo '</div>';// end category_action_buttons
-
-
-echo $d['event']['onCategoryItemsItemAfterAddToCart'];
-echo '<div class="ph-cb"></div>';
-
-if ($t['fade_in_action_icons'] == 1 && $t['display_action_icons'] == 1) {
-
-    echo '<div class="ph-category-action-box-fade-icons '.$lt.'">';
-    echo '<div class="ph-item-action-fade ph-category-action-fade-icons '.$lt.'">';
-    echo $d['icon']['compare'];
-    echo $d['icon']['wishlist'];
-    echo $d['icon']['quickview'];
-    echo $d['icon']['addtocart'];
-    echo '</div>';
-    echo '</div>';
-}
-
-echo '</div>';// end category_action_box_buttons
-
-
-
-echo '</div>';// end category_row_item_box_wrap_content
-echo '</div>';// end category_row_item_box_wrap
-echo '</div>';// end category_row_item_box
-echo '</div>';// end category_row_item_grid
-
-echo "\n";
-*/
 ?>
